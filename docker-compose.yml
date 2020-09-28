@@ -1,10 +1,11 @@
-version: '2'
+version: "3.8"
 
 services:
   web:
-    build:
-      context: .
-      dockerfile: Dockerfile
-    container_name: web
+    build: .
+    environment:
+      - NAME=Andrew
     ports:
-      - "80:80"
+      - 80:80
+    volumes:
+      - .:/app
